@@ -1,0 +1,26 @@
+.swiper-wrapper {
+  width: 650px;
+}
+/* .swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  background-color: white;
+  opacity: 0.7;
+  padding: 20px;
+} */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  opacity: 0.9;
+  padding: 20px;
+  transition: 0.5s all ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px;
+  color: #2b2b2b;
+}

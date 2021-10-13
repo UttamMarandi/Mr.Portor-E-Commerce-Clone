@@ -1,0 +1,258 @@
+export const products = [
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 2,
+    title: "KLÄTTERMUSEN",
+    desc: "Organic Cotton-Jersey T-Shirt",
+    main_img: "./Images/productImages/product_2_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_2_img2.webp",
+      "./Images/productImages/product_2_img3.webp",
+      "./Images/productImages/product_2_img4.webp",
+      "./Images/productImages/product_2_img5.webp",
+    ],
+    price: 130,
+    color: "Black",
+    editor_note_desc:
+      "Klättermusen's T-shirt is cut for a comfortable fit from smooth organic cotton-jersey with a soft handle. It's minimally branded with a small emblem embroidered at the chest. Wear it as a base layer or on its own.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 3,
+    title: "HOKA ONE ONE",
+    desc: "Clifton Edge Rubber-Trimmed Mesh Running Sneakers",
+    main_img: "./Images/productImages/product_3_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_3_img2.webp",
+      "./Images/productImages/product_3_img3.webp",
+      "./Images/productImages/product_3_img4.webp",
+      "./Images/productImages/product_3_img5.webp",
+    ],
+    price: 189,
+    color: "blue",
+    editor_note_desc:
+      "Hoka One One's futuristic fits aren’t just for show - they’re engineered to support your feet. - These 'Clifton Edge' mesh running sneakers create a gliding sensation with each pavement strike - Early-stage Meta-Rockers offer a responsive ride - Geometric heels and rubberised EVA outsoles provide lightweight, cushioned landings. Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives. **Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 4,
+    title: "SNOW PEAK",
+    desc: "Thermal Boa Slim-Fit Polartec Thermal Pro Fleece Jacket",
+    main_img: "./Images/productImages/product_4_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_4_img2.webp",
+      "./Images/productImages/product_4_img3.webp",
+      "./Images/productImages/product_4_img4.webp",
+      "./Images/productImages/product_4_img5.webp",
+    ],
+    price: 296,
+    color: "Wax",
+    editor_note_desc:
+      "Snow Peak's 'Boa' jacket is made from Polartec Thermal Pro® - a soft fleece that's insulating yet breathable. It has practical pouch pockets, a cosy funnel neck and comes in a slim-fit profile, so you can layer it to your liking. Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives. **Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 5,
+    title: "ON SWISS",
+    desc: "Cloudrock Waterproof Mesh Hiking Boots",
+    main_img: "./Images/productImages/product_5_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_5_img2.webp",
+      "./Images/productImages/product_5_img3.webp",
+      "./Images/productImages/product_5_img4.webp",
+      "./Images/productImages/product_5_img5.webp",
+    ],
+    price: 320.54,
+    color: "Brown",
+    editor_note_desc:
+      "On develops technology to enhance performance, whether you prefer the road, track or trail. - The label's first speed hiking boots, this lightweight 'Cloudrock' pair is made from two types of mesh to optimise stability and breathability - Wind- and water-resistant membrane ensure they're waterproof, while a 360° rubberised mudguard adds an extra level of protection - Flexible high collars are padded for ankle support and to reduce risk of blistering - Speedboard™ creates energy return and comfortable Zero-Gravity CloudTec® cushioning absorbs shock - Quickly secure laces with the single-pull FlexLock system - Missiongrip™ rubber soles deliver traction on uneven terrain",
+  },
+  {
+    id: 6,
+    title: "KLÄTTERMUSEN",
+    desc: "Skoll Wool-Blend Fleece Jacket",
+    main_img: "./Images/productImages/product_6_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_6_img2.webp",
+      "./Images/productImages/product_6_img3.webp",
+      "./Images/productImages/product_6_img4.webp",
+      "./Images/productImages/product_6_img5.webp",
+    ],
+    price: 343,
+    color: "Black",
+    editor_note_desc:
+      "The starting point of every Klättermusen garment is fabric development, which is carefully tested and refined as part of the brand's ongoing process. This 'Skoll' fleece jacket is cut from insulating wool-blend fleece and has a funnel neck for extra coverage. The zipped pockets offer secure storage while hiking.",
+  },
+  {
+    id: 7,
+    title: "SNOW PEAK",
+    desc: "Straight-Leg Selvedge Recycled Jeans",
+    main_img: "./Images/productImages/product_7_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_7_img2.webp",
+      "./Images/productImages/product_7_img3.webp",
+      "./Images/productImages/product_7_img4.webp",
+      "./Images/productImages/product_7_img5.webp",
+    ],
+    price: 231,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+  {
+    id: 1,
+    title: "THE NORTH FACE",
+    desc: "1996 Retro Nuptse Quilted Two-Tone Ripstop and Shell Down Jacket",
+    main_img: "./Images/productImages/product_1_main_img.webp",
+    img_gallery: [
+      "./Images/productImages/product_1_img2.webp",
+      "./Images/productImages/product_1_img3.webp",
+      "./Images/productImages/product_1_img4.webp",
+      "./Images/productImages/product_1_img5.webp",
+    ],
+    price: 320.54,
+    color: "blue",
+    editor_note_desc:
+      "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+  },
+];

@@ -4,3 +4,9 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+@import "swiper/swiper.min.css";
+
+@import "swiper/components/navigation/navigation.min.css";
+
+@import url("./styles/ProductSwiper.css");

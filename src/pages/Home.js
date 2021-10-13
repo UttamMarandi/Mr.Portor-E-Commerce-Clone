@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import ProductSwiper from "../components/ProductSwiper";
 import PorterBanner from "../Images/porter_banner.jpg";
 import PorterBanner2 from "../Images/porter_banner_2.jpg";
 import Section3Img1 from "../Images/mr_porter_section_3.jpg";
@@ -8,7 +9,7 @@ const Home = () => {
   return (
     <div className="home_page">
       <Header />
-      <div className="main max-w-6xl mx-auto">
+      <div className="main max-w-6xl mx-auto px-2 md:px-6">
         <div className="top_banner_text pt-6 pb-6 border-b border-gray-400">
           <h2 className="text-center">THE MEN'S STYLE DESTINATION</h2>
         </div>
@@ -42,6 +43,22 @@ const Home = () => {
             GIVENCHY : THE LATEST FW21 COLLECTION
           </h3>
           <button className="pt-1 underline">Shop Now</button>
+        </div>
+        {/* Section 4 */}
+        <div className="section_4 grid grid-flow-col pt-6 pb-6">
+          <div className="left_container col-span-4">
+            <h3 className="text-sm pt-5">WHAT'S NEW TODAY</h3>
+            <h1 className="text-8xl font-semibold pt-8">113</h1>
+            <p className="pt-5">
+              Hundreds of the latest arrivals all in one place
+            </p>
+            <button className="mt-8 bg-gray-700 text-white px-10 py-2 hover:opacity-80 transition duration-75">
+              Shop Now
+            </button>
+          </div>
+          <div className="right_container col-span-8">
+            <ProductSwiper />
+          </div>
         </div>
       </div>
     </div>
