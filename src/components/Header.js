@@ -30,7 +30,7 @@ const Header = () => {
           <ShoppingBagIcon className="h-6 text-gray-400 pl-6" />
         </div>
       </div>
-      <div className="bottom_header max-w-6xl mx-auto flex space-x-6 whitespace-nowrap text-sm justify-center pt-5 pb-5 border-gray-400 border-b-2">
+      <div className="bottom_header max-w-6xl mx-auto flex space-x-6 whitespace-nowrap text-sm justify-center pt-5 pb-5 border-gray-400 border-b">
         <p>What's New</p>
         <p>Designers</p>
         <p>Clothing</p>
