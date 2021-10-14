@@ -1,6 +1,10 @@
 import React from "react";
+
 import Header from "../components/Header";
 import ProductSwiper from "../components/ProductSwiper";
+import ProductCategory from "../components/ProductCategory";
+import { productCategories } from "../data";
+import { products } from "../data";
 import PorterBanner from "../Images/porter_banner.jpg";
 import PorterBanner2 from "../Images/porter_banner_2.jpg";
 import Section3Img1 from "../Images/mr_porter_section_3.jpg";
@@ -45,7 +49,7 @@ const Home = () => {
           <button className="pt-1 underline">Shop Now</button>
         </div>
         {/* Section 4 */}
-        <div className="section_4 grid grid-flow-col pt-6 pb-6">
+        <div className="section_4 grid grid-flow-col pt-6 pb-16">
           <div className="left_container col-span-4">
             <h3 className="text-sm pt-5">WHAT'S NEW TODAY</h3>
             <h1 className="text-8xl font-semibold pt-8">113</h1>
@@ -57,7 +61,46 @@ const Home = () => {
             </button>
           </div>
           <div className="right_container col-span-8">
-            <ProductSwiper />
+            <ProductSwiper sliceX="0" sliceY="8" />
+          </div>
+        </div>
+        {/* Section 5 */}
+        <div className="section_5 pt-10 border-t border-gray-400 pb-14">
+          <div className="top_container grid grid-cols-2 divide-x divide-gray-400 divide-dotted">
+            {productCategories.slice(0, 2).map((product) => (
+              <ProductCategory
+                id={product.id}
+                title={product.title}
+                img={product.main_img}
+                button_txt={product.button_txt}
+              />
+            ))}
+          </div>
+          <div className="bottom_container grid grid-cols-3 pt-10 divide-x divide-gray-400 divide-dotted ">
+            {productCategories.slice(2, 5).map((product) => (
+              <ProductCategory
+                id={product.id}
+                title={product.title}
+                img={product.main_img}
+                button_txt={product.button_txt}
+              />
+            ))}
+          </div>
+        </div>
+        {/* Section 6 */}
+        <div className="section_6 grid grid-flow-col pt-14 pb-16 border-t border-gray-400">
+          <div className="left_container col-span-4">
+            <h3 className="text-sm pt-5">WHAT'S NEW TODAY</h3>
+            <h1 className="text-8xl font-semibold pt-8">113</h1>
+            <p className="pt-5">
+              Hundreds of the latest arrivals all in one place
+            </p>
+            <button className="mt-8 bg-gray-700 text-white px-10 py-2 hover:opacity-80 transition duration-75">
+              Shop Now
+            </button>
+          </div>
+          <div className="right_container col-span-8">
+            <ProductSwiper sliceX="8" sliceY="16" />
           </div>
         </div>
       </div>
