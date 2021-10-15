@@ -10,3 +10,8 @@
 @import "swiper/components/navigation/navigation.min.css";
 
 @import url("./styles/ProductSwiper.css");
+
+/* Radio Buttons */
+.radio_custom:checked ~ label > div {
+  border: 1px solid #2b2b2b;
+}

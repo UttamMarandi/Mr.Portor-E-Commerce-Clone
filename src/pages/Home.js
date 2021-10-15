@@ -1,6 +1,7 @@
 import React from "react";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import ProductSwiper from "../components/ProductSwiper";
 import ProductCategory from "../components/ProductCategory";
 import { productCategories } from "../data";
@@ -88,7 +89,7 @@ const Home = () => {
           </div>
         </div>
         {/* Section 6 */}
-        <div className="section_6 grid grid-flow-col pt-14 pb-16 border-t border-gray-400">
+        <div className="section_6 grid grid-flow-col pt-14 pb-16 border-t border-gray-400 border-b">
           <div className="left_container col-span-4">
             <h3 className="text-sm pt-5">WHAT'S NEW TODAY</h3>
             <h1 className="text-8xl font-semibold pt-8">113</h1>
@@ -104,6 +105,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
