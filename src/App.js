@@ -1,5 +1,6 @@
 import "./App.css";
-import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+// import SignUp from "./pages/SignUp";
 
 // import AllProducts from "./pages/AllProducts";
 // import Home from "./pages/Home";
@@ -15,7 +16,8 @@ function App() {
       {/* <Home /> */}
       {/* <Product /> */}
       {/* <Login /> */}
-      <SignUp />
+      {/* <SignUp /> */}
+      <Login />
     </div>
   );
 }
