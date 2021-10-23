@@ -14,6 +14,7 @@ export const products = [
     color: "blue",
     editor_note_desc:
       "The '1996 Retro Nuptse' jacket is one of The North Face's best-selling styles, and it's been issued in a variety of colours and finishes over the years. This one's made from durable ripstop and shell, and filled with an insulating down layer. The funnel neckline and VELCRO®-fastening cuffs will help keep out the chill.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+    cat: "shoes",
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ export const products = [
     color: "Black",
     editor_note_desc:
       "Klättermusen's T-shirt is cut for a comfortable fit from smooth organic cotton-jersey with a soft handle. It's minimally branded with a small emblem embroidered at the chest. Wear it as a base layer or on its own.Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives.Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+    cat: "shoes",
   },
   {
     id: 3,
@@ -46,6 +48,7 @@ export const products = [
     color: "blue",
     editor_note_desc:
       "Hoka One One's futuristic fits aren’t just for show - they’re engineered to support your feet. - These 'Clifton Edge' mesh running sneakers create a gliding sensation with each pavement strike - Early-stage Meta-Rockers offer a responsive ride - Geometric heels and rubberised EVA outsoles provide lightweight, cushioned landings. Profits* from the sale of this item from October 11 to 31 October 2021 will be donated to the MR PORTER Health In Mind Fund powered by Movember to support men’s mental and physical health initiatives. **Profits means the sale price of the product, less any applicable sales tax and/or duties, the original cost of the product, and any associated inbound taxes, duties and shipping charges. Movember Europe is a registered charity No.1137948 (England/Wales) SC041981 (Scotland) / Movember Foundation is a registered 501(c)3 non-profit organization. For more information visit MR PORTER Health In Mind.",
+    cat: "shoes",
   },
   {
     id: 4,
@@ -263,6 +266,7 @@ export const productCategories = [
     title: "THE BOOT ROOM: NEW-SEASON STYLES",
     main_img: "productImages/productCat_100_main_img.webp",
     button_txt: "Shop now",
+    cat: "shoes",
   },
   {
     id: 101,
@@ -270,23 +274,27 @@ export const productCategories = [
       "IT'S COAT SEASON: BRAVE THE ELEMENTS IN LIGHTWEIGHT AND WATERPROOF JACKETS",
     main_img: "productImages/productCat_101_main_img.jpg",
     button_txt: "Shop now",
+    cat: "Coat",
   },
   {
     id: 102,
     title: "ACNE STUDIOS: SHOP THE AW21 COLLECTION",
     main_img: "/productImages/productCat_102_main_img.jpg",
     button_txt: "Shop now",
+    cat: "summer",
   },
   {
     id: 103,
     title: "THE KNITWEAR EDIT: AUTUMN'S FINEST",
     main_img: "/productImages/productCat_103_main_img.jpg",
     button_txt: "Shop now",
+    cat: "Luxury",
   },
   {
     id: 104,
     title: "THE KHAKI ROOM: OWN YOUR STYLE",
     main_img: "/productImages/productCat_104_main_img.webp",
     button_txt: "Shop now",
+    cat: "khaki",
   },
 ];

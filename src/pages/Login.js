@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 //Icons
 import { EyeIcon } from "@heroicons/react/outline";
@@ -87,6 +88,7 @@ const Login = () => {
           </form>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

@@ -74,6 +74,7 @@ const Home = () => {
                 title={product.title}
                 img={product.main_img}
                 button_txt={product.button_txt}
+                cat={product.cat}
               />
             ))}
           </div>
@@ -84,6 +85,7 @@ const Home = () => {
                 title={product.title}
                 img={product.main_img}
                 button_txt={product.button_txt}
+                cat={product.cat}
               />
             ))}
           </div>

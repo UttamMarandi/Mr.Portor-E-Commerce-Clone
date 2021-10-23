@@ -3,6 +3,7 @@ import Header from "../components/Header";
 
 import { EyeIcon } from "@heroicons/react/outline";
 import { EyeOffIcon } from "@heroicons/react/outline";
+import Footer from "../components/Footer";
 
 const SignUp = () => {
   //variables
@@ -153,6 +154,7 @@ const SignUp = () => {
           </form>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

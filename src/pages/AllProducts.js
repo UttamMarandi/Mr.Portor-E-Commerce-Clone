@@ -3,7 +3,12 @@ import Header from "../components/Header";
 import Dropdown from "../components/Dropdown";
 import { products } from "../data";
 import Footer from "../components/Footer";
+import { useLocation } from "react-router";
 const AllProducts = () => {
+  const location = useLocation();
+  const cat = location.pathname.split("/")[2]; //get the category
+
+  //get the url
   let url = "";
   if (typeof window !== "undefined") {
     url = window.location.href;
@@ -22,7 +27,7 @@ const AllProducts = () => {
         </div>
         <div className="main grid grid-flow-col pt-10 z-10">
           <aside className="left_sidebar col-span-4 w-52">
-            <h2>ALl Filters</h2>
+            <h2>All Filters</h2>
           </aside>
           <div className="right_main_content col-span-8">
             <h1 className="text-3xl p-2">Products</h1>
