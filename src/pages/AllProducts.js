@@ -13,6 +13,12 @@ const sizeOptions = [
   { value: "XL" },
   { value: "XXL" },
 ];
+const colorOptions = [
+  { value: "Red" },
+  { value: "Green" },
+  { value: "Yellow" },
+  { value: "Purple" },
+];
 const AllProducts = () => {
   const location = useLocation();
   const cat = location.pathname.split("/")[2]; //get the category
@@ -34,7 +40,8 @@ const AllProducts = () => {
   console.log("filters", filter);
 
   //Dropdown
-  const [dropdownValue, setDropdownValue] = useState(null);
+  const [dropdownSize, setDropdownSize] = useState(null);
+  const [dropdownColor, setDropdownColor] = useState(null);
 
   return (
     <div className="products_page">
@@ -71,8 +78,14 @@ const AllProducts = () => {
             <Dropdown2
               sizeOptions={sizeOptions}
               clickText={"Select Size"}
-              value={dropdownValue}
-              onChange={(val) => setDropdownValue(val)}
+              value={dropdownColor}
+              onChange={(val) => setDropdownColor(val)}
+            />
+            <Dropdown2
+              sizeOptions={colorOptions}
+              clickText={"Select Color"}
+              value={dropdownSize}
+              onChange={(val) => setDropdownSize(val)}
             />
           </aside>
           <div className="right_main_content col-span-8">
