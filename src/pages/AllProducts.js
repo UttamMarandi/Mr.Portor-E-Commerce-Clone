@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Dropdown from "../components/Dropdown";
 import { products } from "../data";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router";
+import Dropdown2 from "../components/Dropdown2";
+
+const sizeOptions = [
+  { value: "S" },
+  { value: "M" },
+  { value: "L" },
+  { value: "XL" },
+  { value: "XXL" },
+];
 const AllProducts = () => {
   const location = useLocation();
   const cat = location.pathname.split("/")[2]; //get the category
@@ -13,6 +22,20 @@ const AllProducts = () => {
   if (typeof window !== "undefined") {
     url = window.location.href;
   }
+  //handleFilters
+  const [filter, setFilter] = useState({});
+  const handleFilters = (e) => {
+    const value = e.target.value;
+    setFilter({
+      ...filter, //to persist previous selected option
+      [e.target.name]: value,
+    });
+  };
+  console.log("filters", filter);
+
+  //Dropdown
+  const [dropdownValue, setDropdownValue] = useState(null);
+
   return (
     <div className="products_page">
       <Header />
@@ -27,7 +50,30 @@ const AllProducts = () => {
         </div>
         <div className="main grid grid-flow-col pt-10 z-10">
           <aside className="left_sidebar col-span-4 w-52">
-            <h2>All Filters</h2>
+            <h2>Filter Products</h2>
+            <div className="w-full h-px bg-gray-300 mt-12"></div>
+            <select name="color" onChange={handleFilters}>
+              <option disabled>Color</option>
+              <option value="Black">Black</option>
+              <option value="Red">Red</option>
+              <option value="Green">Green</option>
+              <option value="Purple">Purple</option>
+              <option value="Yellow">Yellow</option>
+              <option value="Orange">Orange</option>
+            </select>
+            <select name="size" onChange={handleFilters}>
+              <option>Size</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+              <option value="XXL">XXL</option>
+            </select>
+            <Dropdown2
+              sizeOptions={sizeOptions}
+              clickText={"Select Size"}
+              value={dropdownValue}
+              onChange={(val) => setDropdownValue(val)}
+            />
           </aside>
           <div className="right_main_content col-span-8">
             <h1 className="text-3xl p-2">Products</h1>
