@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { products } from "../data";
 
 const ProductList = ({ cat, filters, sort }) => {
+  console.log("cat", cat);
   //get the url
   let url = "";
   if (typeof window !== "undefined") {
@@ -11,6 +12,8 @@ const ProductList = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   console.log("products", products);
+  console.log("filteredProducts", filteredProducts);
+  console.log("filters", filters);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -32,16 +35,36 @@ const ProductList = ({ cat, filters, sort }) => {
     cat &&
       setFilteredProducts(
         products.filter((item) =>
-          Object.entries(filters).every(([key, value]) =>
-            item[key].includes(value)
-          )
+          Object.entries(filters).every(([key, value]) => {
+            console.log("item", item);
+            console.log("key", item[key], item[value]);
+            return item[key].includes(value);
+          })
         )
       );
+
     //products contain our fetched data. filter() iterate over element in array , in this case each object in array and it returns a boolean variable.If true the element is stored in the new array , if false... element is discarded
     //filters is the array containing object with size and color keys. //Object.entries gives an iterable arrays of array for both the keys and values
     //.every() iterates over each element in array and tests whether all elements in the array pass the test implemented by the provided function.
     //so we are checking if each item in prodcuts for that particular [key] contains any value or not. if it conatians the value than it is true
   }, [products, cat, filters]);
+
+  //for sorting
+  useEffect(() => {
+    if (sort === "newest") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.createdAt - b.createdAt)
+      );
+    } else if (sort === "Price Low to High") {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => a.price - b.price)
+      );
+    } else {
+      setFilteredProducts((prev) =>
+        [...prev].sort((a, b) => b.price - a.price)
+      );
+    }
+  }, [sort]);
 
   return (
     <div className="product_container grid grid-cols-3">

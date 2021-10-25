@@ -7,7 +7,7 @@ import Section3Img1 from "../Images/mr_porter_section_3.jpg";
 
 SwiperCore.use([Navigation]);
 
-const ProductSwiper = ({ sliceX, sliceY }) => {
+const ProductSwiper = ({ sliceX, sliceY, products }) => {
   let url = "";
   if (typeof window !== "undefined") {
     url = window.location.href;
@@ -27,14 +27,10 @@ const ProductSwiper = ({ sliceX, sliceY }) => {
       >
         {products
           .slice(Number(sliceX), Number(sliceY))
-          .map(({ main_img, title }) => (
+          .map(({ img, title }) => (
             <SwiperSlide className="cursor-pointer">
               <div className="img_container relative h-60">
-                <img
-                  src={`${url}${main_img}`}
-                  alt=""
-                  className="w-full h-full object-cover"
-                />
+                <img src={img} alt="" className="w-full h-full object-cover" />
               </div>
               <h3 className="text-center">{title}</h3>
             </SwiperSlide>

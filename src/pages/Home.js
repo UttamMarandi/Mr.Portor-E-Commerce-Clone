@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -6,11 +6,27 @@ import ProductSwiper from "../components/ProductSwiper";
 import ProductCategory from "../components/ProductCategory";
 import { productCategories } from "../data";
 import { products } from "../data";
+import axios from "axios";
 import PorterBanner from "../Images/porter_banner.jpg";
 import PorterBanner2 from "../Images/porter_banner_2.jpg";
 import Section3Img1 from "../Images/mr_porter_section_3.jpg";
+import { useEffect } from "react/cjs/react.development";
 
 const Home = () => {
+  const [products, setProducts] = useState([]);
+  //fetch products
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/api/products");
+        setProducts(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getProducts();
+  });
+
   return (
     <div className="home_page">
       <Header />
@@ -62,7 +78,7 @@ const Home = () => {
             </button>
           </div>
           <div className="right_container col-span-8">
-            <ProductSwiper sliceX="0" sliceY="8" />
+            <ProductSwiper sliceX="0" sliceY="8" products={products} />
           </div>
         </div>
         {/* Section 5 */}
@@ -103,7 +119,7 @@ const Home = () => {
             </button>
           </div>
           <div className="right_container col-span-8">
-            <ProductSwiper sliceX="8" sliceY="16" />
+            <ProductSwiper sliceX="3" sliceY="7" products={products} />
           </div>
         </div>
       </div>
