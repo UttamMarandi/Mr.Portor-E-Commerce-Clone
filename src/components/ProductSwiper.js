@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper/core";
 import { products } from "../data";
 import Section3Img1 from "../Images/mr_porter_section_3.jpg";
+import { Link } from "react-router-dom";
 // Import Swiper styles
 
 SwiperCore.use([Navigation]);
@@ -27,12 +28,18 @@ const ProductSwiper = ({ sliceX, sliceY, products }) => {
       >
         {products
           .slice(Number(sliceX), Number(sliceY))
-          .map(({ img, title }) => (
+          .map(({ img, title, _id }) => (
             <SwiperSlide className="cursor-pointer">
-              <div className="img_container relative h-60">
-                <img src={img} alt="" className="w-full h-full object-cover" />
-              </div>
-              <h3 className="text-center">{title}</h3>
+              <Link to={`/product/${_id}`}>
+                <div className="img_container relative h-60">
+                  <img
+                    src={img}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-center">{title}</h3>
+              </Link>
             </SwiperSlide>
           ))}
       </Swiper>

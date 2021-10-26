@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { products } from "../data";
 
 const ProductList = ({ cat, filters, sort }) => {
@@ -70,20 +71,22 @@ const ProductList = ({ cat, filters, sort }) => {
     <div className="product_container grid grid-cols-3">
       {products.map((product) => (
         <div className="single_product p-2 pt-8 cursor-pointer ">
-          <div className="img_container relative h-80 transition duration-75 ease-out">
-            <img
-              src={product.img}
-              alt=""
-              className="w-full h-full object-cover"
-              // onMouseOver={(e) =>
-              //   (e.currentTarget.src = `${url}${product.img_gallery[0]}`)
-              // }
-              // onMouseOut={(e) =>
-              //   (e.currentTarget.src = `${url}${product.main_img}`)
-              // }
-            />
-          </div>
-          <h3 className="pt-6">{product.title}</h3>
+          <Link to={`/product/${product._id}`}>
+            <div className="img_container relative h-80 transition duration-75 ease-out">
+              <img
+                src={product.img}
+                alt=""
+                className="w-full h-full object-cover"
+                // onMouseOver={(e) =>
+                //   (e.currentTarget.src = `${url}${product.img_gallery[0]}`)
+                // }
+                // onMouseOut={(e) =>
+                //   (e.currentTarget.src = `${url}${product.main_img}`)
+                // }
+              />
+            </div>
+            <h3 className="pt-6">{product.title}</h3>
+          </Link>
           <h3 className="pt-2">{product.desc}</h3>
           <p className="pt-5">${product.price}</p>
         </div>

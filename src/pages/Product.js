@@ -1,11 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import Section3Img1 from "../Images/mr_porter_section_3.jpg";
 import { products } from "../data";
+import { useLocation } from "react-router";
+import axios from "axios";
+import { publicRequest } from "../requestMethods";
 
 const Product = () => {
   let [value, setValue] = useState("");
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
 
+  const [product, setProduct] = useState({});
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await publicRequest.get(`/products/find/${id}`);
+        setProduct(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    getProduct();
+  }, [id]);
   return (
     <div className="product">
       <Header />
@@ -13,23 +30,23 @@ const Product = () => {
         <div className="top_part grid grid-flow-col grid-cols-2 gap-20 ">
           <div className="left_container ">
             <div className="img_container relative ">
-              <img
-                src={products[0].main_img}
-                alt=""
-                className=" object-cover"
-              />
+              <img src={product.img} alt="" className=" object-cover" />
             </div>
           </div>
           <div className="right_container ">
-            <h2 className="text-2xl font-light">{products[0].title}</h2>
-            <h3 className="pt-4 font-semibold">{products[0].desc}</h3>
-            <p className="pt-2 text-2xl">${products[0].price}</p>
+            <h2 className="text-2xl font-light">{product.title}</h2>
+            <h3 className="pt-4 font-light">{product.desc}</h3>
+            <p className="pt-2 text-2xl">${product.price}</p>
             <div className="flex justify-between pt-8">
               <h3 className="capitalize text-gray-400">
                 Color :{" "}
-                <span className="text-pitch-black capitalize">
-                  {products[0].color}
-                </span>
+                <div className="text-pitch-black capitalize">
+                  {product.color.map((c) => (
+                    <span className="mr-3" key={c}>
+                      {c}
+                    </span>
+                  ))}
+                </div>
               </h3>
               <p className="underline cursor-pointer">View size guide</p>
             </div>
