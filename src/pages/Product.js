@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import Section3Img1 from "../Images/mr_porter_section_3.jpg";
 import { products } from "../data";
@@ -23,6 +23,17 @@ const Product = () => {
     };
     getProduct();
   }, [id]);
+
+  const sizeData = product.size?.map((item) => ({
+    id: `input_${item}`,
+    value: item,
+  }));
+  console.log("sizeData", sizeData);
+
+  //for border styling
+  const [clicked, setClicked] = useState(false);
+  const radioClick = useRef(null);
+
   return (
     <div className="product">
       <Header />
@@ -41,11 +52,12 @@ const Product = () => {
               <h3 className="capitalize text-gray-400">
                 Color :{" "}
                 <div className="text-pitch-black capitalize">
-                  {product.color.map((c) => (
-                    <span className="mr-3" key={c}>
-                      {c}
-                    </span>
-                  ))}
+                  {product.color &&
+                    product.color.map((c) => (
+                      <span className="mr-3" key={c}>
+                        {c}
+                      </span>
+                    ))}
                 </div>
               </h3>
               <p className="underline cursor-pointer">View size guide</p>
@@ -57,97 +69,42 @@ const Product = () => {
                   {value === "" ? `Select Size` : `${value}`}
                 </span>
               </h3>
+
               <div className="grid grid-cols-4 gap-8 gap-y-4">
-                <div>
-                  <input
-                    id="pickup_1"
-                    className="invisible radio_custom"
-                    type="radio"
-                    value="XS"
-                    checked={value === "XS"}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label for="pickup_1" className="radio_custom_label">
-                    <div className="border border-gray-300 py-3 text-center cursor-pointer ">
-                      XS
-                    </div>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    id="pickup_2"
-                    className="radio_custom invisible"
-                    type="radio"
-                    value="SM"
-                    checked={value === "SM"}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label for="pickup_2" className="radio_custom_label">
-                    <div className="border border-gray-300 py-3 text-center cursor-pointer ">
-                      SM
-                    </div>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    id="pickup_3"
-                    className="radio_custom invisible"
-                    type="radio"
-                    value="M"
-                    checked={value === "M"}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label for="pickup_3" className="radio_custom_label">
-                    <div className="border border-gray-300 py-3 text-center cursor-pointer ">
-                      M
-                    </div>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    id="pickup_4"
-                    className="radio_custom invisible"
-                    type="radio"
-                    value="L"
-                    checked={value === "L"}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label for="pickup_4" className="radio_custom_label">
-                    <div className="border border-gray-300 py-3 text-center cursor-pointer ">
-                      L
-                    </div>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    id="pickup_5"
-                    className="radio_custom invisible"
-                    type="radio"
-                    value="XL"
-                    checked={value === "XL"}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label for="pickup_5" className="radio_custom_label">
-                    <div className="border border-gray-300 py-3 text-center cursor-pointer ">
-                      XL
-                    </div>
-                  </label>
-                </div>
-                <div>
-                  <input
-                    id="pickup_6"
-                    className="radio_custom invisible"
-                    type="radio"
-                    value="XXL"
-                    checked={value === "XXL"}
-                    onChange={(e) => setValue(e.target.value)}
-                  />
-                  <label for="pickup_6" className="radio_custom_label">
-                    <div className="border border-gray-300 py-3 text-center cursor-pointer ">
-                      XXL
-                    </div>
-                  </label>
-                </div>
+                {sizeData?.map(({ id, value }) => (
+                  <div>
+                    <input
+                      id={id}
+                      className="invisible radio_custom"
+                      type="radio"
+                      value={value}
+                      checked={value === { value }}
+                      onChange={(e) => {
+                        const nodes =
+                          e.target.parentElement.parentElement.childNodes;
+                        for (let i = 0; i < nodes.length; i++) {
+                          nodes[i].lastChild.firstChild.classList.remove(
+                            "show_border"
+                          );
+                        }
+                        e.target.nextSibling.firstChild.classList.toggle(
+                          "show_border"
+                        );
+                        return setValue(e.target.value);
+                      }}
+                    />
+                    <label for={id} className="radio_custom_label">
+                      <div
+                        ref={radioClick}
+                        className={`border border-gray-300 py-3 text-center cursor-pointer ${
+                          clicked && "show_border"
+                        }`}
+                      >
+                        {value}
+                      </div>
+                    </label>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
