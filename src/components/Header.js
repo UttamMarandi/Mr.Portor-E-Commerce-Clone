@@ -7,6 +7,7 @@ import {
   SearchIcon,
 } from "@heroicons/react/outline";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const quantity = useSelector((state) => state.cart.quantity);
@@ -34,7 +35,9 @@ const Header = () => {
             <span className="absolute -top-2 -right-3  h-6 w-6 bg-pitch-black rounded-full text-white font-light flex items-center justify-center hover:bg-opacity-80 cursor-pointer">
               {quantity}
             </span>
-            <ShoppingBagIcon className="h-6 text-gray-400 pl-6" />
+            <Link to="/cart">
+              <ShoppingBagIcon className="h-6 text-gray-400 pl-6 cursor-pointer" />
+            </Link>
           </div>
         </div>
       </div>

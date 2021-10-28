@@ -11,6 +11,7 @@ import SignUp from "./pages/SignUp";
 import AllProducts from "./pages/AllProducts";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
+import Cart from "./pages/Cart";
 
 //pages
 
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route path="/product/:id">
           <Product />
+        </Route>
+        <Route path="/cart">
+          <Cart />
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/register">

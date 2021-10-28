@@ -43,20 +43,17 @@ const Product = () => {
   //set
   let [sizeValue, setSizeValue] = useState("");
   let [colorValue, setColorValue] = useState("");
-  let [quantity, setQuantity] = useState(0);
 
   //
-  const handleQuantity = () => {
-    setQuantity(quantity + 1);
-  };
+
   const handleClick = () => {
     //update cart
-    quantity = quantity + 1; //this is better option //first quantity is not registering
+    //this is better option //first quantity is not registering
     dispatch(
       addProduct({
         product: product,
         quantity: 1, //we don't have the option to add multiple single product, so quantity will be 1
-        price: Number(product.price) * quantity,
+        price: Number(product.price),
         // price: quantity === 0 ? product.price : product.price * (quantity + 1),
         // I have no idea why first click is not registering for quantity , so need to improvise for price
         colorValue: colorValue,
@@ -185,9 +182,7 @@ const Product = () => {
               <button
                 disabled={sizeValue === "" && colorValue === ""}
                 onClick={() => {
-                  handleQuantity();
                   handleClick();
-                  console.log("quantity", quantity);
                 }}
                 className={`text-center bg-pitch-black text-white w-full p-3 text-sm hover:bg-opacity-80 ${
                   sizeValue === "" &&
