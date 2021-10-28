@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import { PlusIcon, MinusIcon } from "@heroicons/react/outline";
-import Section3Img1 from "../Images/mr_porter_section_3.jpg";
+import Image from "../Images/productImages/product_1_img2.webp";
 import Footer from "../components/Footer";
 import { useSelector } from "react-redux";
+import StripeCheckout from "react-stripe-checkout";
+import { useState } from "react/cjs/react.development";
+import { userRequest } from "../requestMethods";
+
+const KEY =
+  "pk_test_51JncpqSEnDiJgvTwSujwbZb6rBs1hFeh9K1GSCvlgHng93ugVANT5thkUbMfW3FUZ608XLUJ7VEME8ifkjqbGQth00iu6nA4Zs";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  console.log("cart", cart);
+  console.log(cart);
+
+  const [stripeToken, setStripeToken] = useState(null);
+  const onToken = (token) => {
+    setStripeToken(token);
+  };
+  useEffect(() => {
+    const makeRequest = async () => {
+      try {
+        const res = await userRequest("/checkout/payment", {
+          tokenId: stripeToken,
+          amount: cart.total * 100, //stripe calculates money in cents
+        });
+      } catch {}
+    };
+  }, [stripeToken]);
 
   return (
     <div className="cart_page">
@@ -76,23 +97,40 @@ const Cart = () => {
               <h2 className="summary_title text-lg font-light">
                 Order Summary
               </h2>
-              <div className="summary_item mx-5 flex justify-between">
+              <div className="summary_item flex justify-between">
                 <span className="summary_item_text">Subtotal</span>
-                <span className="summary_item_price">$ Cart Total</span>
+                <span className="summary_item_price">{cart.total}</span>
               </div>
-              <div className="summary_item">
+              <div className="summary_item flex justify-between">
+                <span className="summary_item_text">Estimated Shipping</span>
+                <span>$ -5.90</span>
+              </div>
+              <div className="summary_item flex justify-between">
                 <span className="summary_item_text">Shipping Discount</span>
                 <span>$ -5.90</span>
               </div>
-              <div className="summary_item" type="total">
-                <span className="summary_item_text">Total</span>
-                <span className="summary_item_price">$ Cart Total</span>
+              <div className="summary_item flex justify-between" type="total">
+                <span className="summary_item_text">Total : </span>
+                <span className="summary_item_price text-right">
+                  {cart.total}
+                </span>
               </div>
               {/* Stripe Checkout */}
               {/* <StripeCheckout/> */}
-              <button className="w-full bg-pitch-black text-white p-2 mt-4 hover:opacity-80">
-                CHECOUT NOW
-              </button>
+              <StripeCheckout
+                name="Mr. Porter"
+                image={Image}
+                billingAddress
+                shippingAddress
+                description={`Your total is $${cart.total}`}
+                amount={cart.total * 100}
+                token={onToken}
+                stripeKey={KEY}
+              >
+                <button className="w-full bg-pitch-black text-white p-2 mt-4 hover:opacity-80">
+                  CHECOUT NOW
+                </button>
+              </StripeCheckout>
             </div>
           </div>
         </div>
