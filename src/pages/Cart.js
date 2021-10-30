@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { useState } from "react/cjs/react.development";
 import { userRequest } from "../requestMethods";
+import { useHistory } from "react-router";
 
 const KEY =
   "pk_test_51JncpqSEnDiJgvTwSujwbZb6rBs1hFeh9K1GSCvlgHng93ugVANT5thkUbMfW3FUZ608XLUJ7VEME8ifkjqbGQth00iu6nA4Zs";
@@ -16,19 +17,22 @@ const Cart = () => {
   console.log(cart);
 
   const [stripeToken, setStripeToken] = useState(null);
+  const history = useHistory();
   const onToken = (token) => {
     setStripeToken(token);
   };
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const res = await userRequest("/checkout/payment", {
-          tokenId: stripeToken,
+        const res = await userRequest.post("/checkout/payment", {
+          tokenId: stripeToken.id,
           amount: cart.total * 100, //stripe calculates money in cents
         });
+        history.push("/success", { data: res.data });
       } catch {}
     };
-  }, [stripeToken]);
+    stripeToken && makeRequest(); //only when stripe token exists we call this function
+  }, [stripeToken, cart.total, history]);
 
   return (
     <div className="cart_page">
