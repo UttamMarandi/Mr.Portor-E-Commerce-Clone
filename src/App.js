@@ -16,7 +16,7 @@ import Cart from "./pages/Cart";
 //pages
 
 function App() {
-  const user = true;
+  const user = false;
   return (
     <Router>
       {/*  A <Switch> looks through its children <Route>s and

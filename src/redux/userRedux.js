@@ -9,10 +9,10 @@ const userSlice = createSlice({
   },
   reducers: {
     loginStart: (state) => {
-      state.isFetching(true);
+      state.isFetching = true;
     },
     loginSuccess: (state, action) => {
-      state.isFetching(false); //we will carry a fetch request. after fetching we set isFetching to false
+      state.isFetching = false; //we will carry a fetch request. after fetching we set isFetching to false
       state.currentUser(action.payload); //our user becomes the action.payload, action.payload is the res that we received from fetch
     },
     loginFailure: (state) => {

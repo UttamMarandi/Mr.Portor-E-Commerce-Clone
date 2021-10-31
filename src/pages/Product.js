@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
-import Section3Img1 from "../Images/mr_porter_section_3.jpg";
-import { products } from "../data";
+
 import { useLocation } from "react-router";
-import axios from "axios";
 import { publicRequest } from "../requestMethods";
-import { useSelector } from "react-redux";
+
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
 
