@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 
 import { useLocation } from "react-router";
@@ -6,6 +6,7 @@ import { publicRequest } from "../requestMethods";
 
 import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
+import Footer from "../components/Footer";
 
 const Product = () => {
   const location = useLocation();
@@ -63,7 +64,7 @@ const Product = () => {
   return (
     <div className="product">
       <Header />
-      <div className="main max-w-6xl mx-auto pt-10">
+      <div className="main max-w-6xl mx-auto pt-10 pb-6">
         <div className="top_part grid grid-flow-col grid-cols-2 gap-20 ">
           {/* Image */}
           <div className="left_container ">
@@ -198,6 +199,8 @@ const Product = () => {
           </div>
         </div>
       </div>
+      {/*  */}
+      <Footer />
     </div>
   );
 };

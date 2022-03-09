@@ -5,12 +5,13 @@ import Footer from "../components/Footer";
 import ProductSwiper from "../components/ProductSwiper";
 import ProductCategory from "../components/ProductCategory";
 import { productCategories } from "../data";
-import { products } from "../data";
+
 import axios from "axios";
 import PorterBanner from "../Images/porter_banner.jpg";
 import PorterBanner2 from "../Images/porter_banner_2.jpg";
 import Section3Img1 from "../Images/mr_porter_section_3.jpg";
 import { useEffect } from "react/cjs/react.development";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -54,7 +55,9 @@ const Home = () => {
               capital is also a playground ripe for outdoor adventure and
               exploration and a brilliant place to go walking.
             </p>
-            <button className="pt-4 underline">Show More</button>
+            <Link to="/products">
+              <button className="pt-4 underline">Show More</button>
+            </Link>
           </div>
         </div>
         {/* Section 3 */}
@@ -63,7 +66,9 @@ const Home = () => {
           <h3 className="text-sm pt-5">
             GIVENCHY : THE LATEST FW21 COLLECTION
           </h3>
-          <button className="pt-1 underline">Shop Now</button>
+          <Link to="/">
+            <button className="pt-1 underline">Shop Now</button>
+          </Link>
         </div>
         {/* Section 4 */}
         <div className="section_4 grid grid-flow-col pt-6 pb-16">
@@ -73,9 +78,11 @@ const Home = () => {
             <p className="pt-5">
               Hundreds of the latest arrivals all in one place
             </p>
-            <button className="mt-8 bg-gray-700 text-white px-10 py-2 hover:opacity-80 transition duration-75">
-              Shop Now
-            </button>
+            <Link to="/products">
+              <button className="mt-8 bg-gray-700 text-white px-10 py-2 hover:opacity-80 transition duration-75">
+                Shop Now
+              </button>
+            </Link>
           </div>
           <div className="right_container col-span-8">
             <ProductSwiper sliceX="0" sliceY="8" products={products} />
@@ -114,9 +121,11 @@ const Home = () => {
             <p className="pt-5">
               Hundreds of the latest arrivals all in one place
             </p>
-            <button className="mt-8 bg-gray-700 text-white px-10 py-2 hover:opacity-80 transition duration-75">
-              Shop Now
-            </button>
+            <Link to="/products">
+              <button className="mt-8 bg-gray-700 text-white px-10 py-2 hover:opacity-80 transition duration-75">
+                Shop Now
+              </button>
+            </Link>
           </div>
           <div className="right_container col-span-8">
             <ProductSwiper sliceX="3" sliceY="7" products={products} />

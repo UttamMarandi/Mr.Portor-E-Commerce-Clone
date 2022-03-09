@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -9,6 +9,7 @@ import { EyeOffIcon } from "@heroicons/react/outline";
 import { login } from "../redux/apiCalls";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [formValue, setFormValue] = useState({
@@ -104,9 +105,11 @@ const Login = () => {
             {error && <span>Something went wrong</span>}
             <div className="w-full h-px bg-gray-300 mt-12"></div>
             <h3 className="text-center pt-7 text-lg">Don't have an account?</h3>
-            <button className="mt-8 p-3 mb-16 bg-white hover:bg-opacity-80 border border-pitch-black w-full text-sm">
-              Create Account
-            </button>
+            <Link to="/register">
+              <button className="mt-8 p-3 mb-16 bg-white hover:bg-opacity-80 border border-pitch-black w-full text-sm">
+                Create Account
+              </button>
+            </Link>
           </form>
         </div>
       </main>

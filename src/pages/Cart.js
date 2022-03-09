@@ -8,6 +8,7 @@ import StripeCheckout from "react-stripe-checkout";
 import { useState } from "react/cjs/react.development";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const KEY =
   "pk_test_51JncpqSEnDiJgvTwSujwbZb6rBs1hFeh9K1GSCvlgHng93ugVANT5thkUbMfW3FUZ608XLUJ7VEME8ifkjqbGQth00iu6nA4Zs";
@@ -41,9 +42,11 @@ const Cart = () => {
         <div className="wrapper p-6">
           <title className="font-light text-center">YOUR BAG</title>
           <div className="top flex items-center justify-between p-6">
-            <button className="top_button p-3 cursor-pointer border border-gray-300">
-              CONTINUE SHOPPING
-            </button>
+            <Link to="/products">
+              <button className="top_button p-3 cursor-pointer border border-gray-300">
+                CONTINUE SHOPPING
+              </button>
+            </Link>
             <div className="top_texts hidden md:block">
               <h2 className="underline cursor-pointer my-3">Shopping Bag(2)</h2>
               <h2 className="underline cursor-pointer my-3">
@@ -61,7 +64,7 @@ const Cart = () => {
             <div className="info flex-3">
               {/* map */}
               {cart.products.map((product) => (
-                <div className="product flex justify-between flex-col md:flex-row">
+                <div className="product flex justify-between flex-col md:flex-row pt-6">
                   <div className="product_detail flex-2 flex">
                     <img
                       src={product.product.img}

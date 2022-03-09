@@ -15,12 +15,16 @@ const Header = () => {
   return (
     <div className="header max-w-7xl mx-auto">
       <div className="top_header grid grid-cols-3 items-center  py-5 border-b-8 border-pitch-black  ">
-        <div>
-          <UserIcon className="h-6 text-gray-400 stroke-1" />
-        </div>
-        <div className=" items-center text-center">
-          <h1 className="font-lato text-3xl ">MR PORTER</h1>
-        </div>
+        <Link to="/login">
+          <div>
+            <UserIcon className="h-6 text-gray-400 stroke-1" />
+          </div>
+        </Link>
+        <Link to="/">
+          <div className=" items-center text-center">
+            <h1 className="font-lato text-3xl ">MR PORTER</h1>
+          </div>
+        </Link>
         <div className="flex text-right justify-end">
           <div className="search_container flex items-center">
             <SearchIcon className="h-5 text-gray-400 cursor-pointer" />
@@ -31,14 +35,15 @@ const Header = () => {
             />
           </div>
           <StarIcon className="h-6 text-gray-400 " />
-          <div className="relative link flex items-center justify-center">
-            <span className="absolute -top-2 -right-3  h-6 w-6 bg-pitch-black rounded-full text-white font-light flex items-center justify-center hover:bg-opacity-80 cursor-pointer">
-              {quantity}
-            </span>
-            <Link to="/cart">
+          <Link to="/cart">
+            <div className="relative link flex items-center justify-center">
+              <span className="absolute -top-2 -right-3  h-6 w-6 bg-pitch-black rounded-full text-white font-light flex items-center justify-center hover:bg-opacity-80 cursor-pointer">
+                {quantity}
+              </span>
+
               <ShoppingBagIcon className="h-6 text-gray-400 pl-6 cursor-pointer" />
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
       <div className="bottom_header max-w-6xl mx-auto flex space-x-6 whitespace-nowrap text-sm justify-center pt-5 pb-5 border-gray-400 border-b">
