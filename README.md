@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/public/uttam_logo.png" />
+  <img src="/public/mrportor.png" />
 </p>
 
 # Uttam Marandi : Portfolio
@@ -9,12 +9,19 @@ A react ecommerce website integrated with redux, node js backend and stripe paym
 # Stack
 
 [React](https://reactjs.org/docs/getting-started.html)
+
 [stripe](https://stripe.com/docs)
+
 [Sass](https://sass-lang.com/documentation)
+
 [react-router](https://reactrouter.com/docs/en/v6)
+
 [axios](https://axios-http.com/docs/intro)
+
 [redux](https://redux.js.org/introduction/getting-started)
+
 [redux-persist](https://react-redux-firebase.com/docs/integrations/redux-persist.html)
+
 [tailwind](https://tailwindcss.com/docs/installation)
 
 # Preview : Video
