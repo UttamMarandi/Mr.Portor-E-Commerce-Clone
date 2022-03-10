@@ -26,7 +26,11 @@ A react ecommerce website integrated with redux, node js backend and stripe paym
 
 # Preview : Video
 
-[Mr.Porte Ecommerce clone](https://uttam-marandi-portfolio.vercel.app/)
+
+
+https://user-images.githubusercontent.com/68814910/157723815-819b1540-1646-47e7-b112-56a0a3552e7b.mp4
+
+
 
 # Installation
 
