@@ -2,7 +2,7 @@
   <img src="/public/mrportor.png" />
 </p>
 
-# Uttam Marandi : Portfolio
+# MR.Porter Ecommerce Website
 
 A react ecommerce website integrated with redux, node js backend and stripe payment
 
@@ -26,11 +26,7 @@ A react ecommerce website integrated with redux, node js backend and stripe paym
 
 # Preview : Video
 
-
-
 https://user-images.githubusercontent.com/68814910/157723815-819b1540-1646-47e7-b112-56a0a3552e7b.mp4
-
-
 
 # Installation
 
