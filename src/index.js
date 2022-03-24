@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "./redux/store";
 import reportWebVitals from "./reportWebVitals";
 import { PersistGate } from "redux-persist/integration/react";
+import CheckBoxComponent from "./pages/CheckBoxComponent";
 
 ReactDOM.render(
   <Provider store={store}>

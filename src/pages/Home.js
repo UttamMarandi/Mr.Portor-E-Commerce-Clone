@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -12,21 +12,41 @@ import PorterBanner2 from "../Images/porter_banner_2.jpg";
 import Section3Img1 from "../Images/mr_porter_section_3.jpg";
 import { useEffect } from "react/cjs/react.development";
 import { Link } from "react-router-dom";
+import CheckBoxComponent from "./CheckBoxComponent";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
-  //fetch products
+
+  // Dummy Delete
+
+  const [check, setCheck] = useState(false);
+  let [count, setCount] = useState(0);
+
+  const callCheck = useCallback(() => {
+    console.log("count in callcheck", count);
+    if (count >= 5) {
+      setCheck(true);
+    } else {
+      setCheck(false);
+    }
+  }, [count]);
+
   useEffect(() => {
-    const getProducts = async () => {
-      try {
-        const res = await axios.get("http://localhost:5000/api/products");
-        setProducts(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    getProducts();
-  });
+    callCheck();
+  }, [count, callCheck]);
+
+  //fetch products
+  // useEffect(() => {
+  //   const getProducts = async () => {
+  //     try {
+  //       const res = await axios.get("http://localhost:5000/api/products");
+  //       setProducts(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   getProducts();
+  // });
 
   return (
     <div className="home_page">
@@ -132,6 +152,22 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* <div
+        style={
+          check
+            ? { background: "green", height: "300px", width: "300px" }
+            : { background: "red", height: "300px", width: "300px" }
+        }
+      ></div>
+      <CheckBoxComponent
+        count={count}
+        addCount={() => {
+          setCount((prevState) => prevState + 1);
+        }}
+        removeCount={() => {
+          setCount((prevState) => prevState - 1);
+        }}
+      /> */}
       <Footer />
     </div>
   );
